@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <script type="text/javascript" src="scripts/angular/angular.js"></script>  
+        <script type="text/javascript" src="scripts/ideasController.js"></script>        
+        <link rel="stylesheet" href="style/bootstrap.css"></link>
+    </head>
+    <body ng-controller="ideasController">
+        <div class="container"
+            <div class="row">
+                <div class="col-sm-6"
+                    <div class="form-horizontal">
+                    <div class="form-group">
+                        <label>Enter Place</label>
+                        <input type="text" ng-model="place"  placeholder="Enter vacation place"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Enter estimate</label>
+                        <input type="number" ng-model="cost" placeholder="Enter cost estimate"/>
+                    </div>
+                    <button  class="btn" ng-click="addIdeas()">Enter</button>
+                </div>
+                <div class="col-sm-6"
+                    <h2>Your selection so far..</h2>
+                    <div ng-repeat="idea in  todoList">
+                        <span>{{idea.place}} - {{idea.cost}} </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
