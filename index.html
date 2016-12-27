@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-
-<html ng-app>
-    <head >
-    <script type="text/javascript"
-        src="scripts/angular/angular.js"></script>        
-    <link rel="stylesheet" href="style/bootstrap.css"></link>
+<html ng-app="myApp">
+    <head>
+        <script type="text/javascript" src="scripts/angular/angular.js"></script>
+        <script type="text/javascript" src="scripts/angular/angular-route.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+        <script type="text/javascript" src="scripts/services/raffelItemService.js"></script>
+        <script type="text/javascript" src="scripts/controllers/mainController.js"></script>
+        <script type="text/javascript" src="scripts/controllers/itemsController.js"></script> 
+        <script type="text/javascript" src="scripts/controllers/raffelController.js"></script>   
+        <script type="text/javascript" src="scripts/directives/fileInputChange.js"></script>    
+        <script type="text/javascript" src="scripts/directives/randomNumber.js"></script>        
+        <link rel="stylesheet" href="style/bootstrap.css"></link>
+        <link rel="stylesheet" href="style/local.css"></link>
     </head>
     <body>
-        <div>
-            <h2>Create your own Knock Knock Jokes!</h2>
-            <div>
-                <span>Knock Knock!</span>
-                <span> Who's there?</span>
-                <input type="text" ng-model="name"/>
-                <span> {{name}} Who ? </span>
-                <input type="text" ng-model="punchLine"/>
-            </div>
-            <input ng-model="name" type="text"/>
-            <label>Hello {{name}} </label>
-            
+        <div id="header" class="jumbotron text-center wwc-header" ng-controller="mainController">
+            <h1>Women Who Code - {{chapter}}</h1>
         </div>
+        <div ng-view></div>
+       
     </body>
-   </html>
+</html>
