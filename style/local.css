@@ -1,10 +1,11 @@
-.wwc-header{
-    background-color: #1abc9c;
-    color:#5f5f5f;
+.wwc-header {
+    background-color: #00897B;
+    color:#FFFFFF;
+    border-bottom: 2px solid #004D40;
 }
-.wwc-random-number{
-    font-size:180px;
+.wwc-random-number {
+    font-size: 180px;
 }
-.wwc-raffel-img{
-    width:150px;
+.wwc-raffel-img {
+    width: 150px;
 }
