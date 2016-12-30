@@ -1,0 +1,22 @@
+<html ng-app="myApp"> 
+    <head>
+        <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="raffle/raffle-item.service.js"></script>
+        <script type="text/javascript" src="main.controller.js"></script>
+        <script type="text/javascript" src="items-form/items.controller.js"></script> 
+        <script type="text/javascript" src="raffle/raffle.controller.js"></script>   
+        <script type="text/javascript" src="directives/file-input-change.directive.js"></script>    
+        <script type="text/javascript" src="directives/random-number.directive.js"></script>        
+        <link rel="stylesheet" href="style/bootstrap.css"></link>
+        <link rel="stylesheet" href="style/local.css"></link>
+        <title>WWCRVA - Raffle</title>
+    </head>
+    <body>
+        <div id="header" class="jumbotron text-center wwc-header" ng-controller="MainController as main">
+            <h1>Women Who Code - {{main.chapter}}</h1>
+        </div>
+        <div ng-view></div>
+    </body>
+</html>
