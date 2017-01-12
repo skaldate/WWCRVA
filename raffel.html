@@ -4,24 +4,32 @@
         <li class="next disabled"><a href="#/raffel">Next</a></li>
     </ul>
     <div class=col-lg-12>
-        <div  class=col-sm-2 ng-repeat="item in swagItems" ng-click="raffelItem(item)">
-            <span>{{item.name}}</span>
-            <span class="wwc-raffel-img">
-                <img ng-src="{{item.thumbnail}}" class="thumbnail wwc-raffel-img"/>
-            </span>
+
+        <div class=col-sm-2 ng-repeat="item in swagItems" ng-click="raffelItem(item)">
+            <div ng-hide="item.selected">
+                <span ng-hide="item.selected">{{item.name}}</span>
+                <span class="wwc-raffel-img">
+                    <img ng-src="{{item.thumbnail}}"  class="thumbnail wwc-raffel-img"/>
+                </span>
+            </div>
         </div>
     </div>
-    <div class="col-lg-5">
-         <span>{{selectedItem.name}}</span>
-            <span class="wwc-raffel-img">
+    <div class=col-lg-12 style="border:1px solid; border-radius:25px;">
+        <div class="col-lg-5">
+            <span>{{selectedItem.name}}</span>
+            <span class="wwc-raffel-img" ng-show="selectedItem.thumbnail !=''" }}>
                 <img ng-src="{{selectedItem.thumbnail}}" class="thumbnail"/>
             </span>
-            <button class="btn btn-success btn-lg" ng-click="raffelGiven()">
-                <span class="glyphicon glyphicon-ok"></span>
+            <button class="btn btn-success btn-lg" ng-click="raffelGiven()" ng-show="winner != 0">
+               <i>Do we have someone with {{winner}} ?</i> <span class="glyphicon glyphicon-ok "></span>
             </button>
-        
+
+        </div>
+        <div class="col-lg-7 ">
+            <h3>{{rangeText}} </h3>
+            <random-number winning-Number='winner' trigger-text="And the winner is... " on-range-change=rangeChange(max)>
+            </random-number>
+        </div>
     </div>
-    <div class="col-lg-7">
-        <random-number min=1 max=50></random-number>
-    </div>
+
 </div>
