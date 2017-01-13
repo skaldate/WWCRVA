@@ -1,0 +1,27 @@
+{
+    "name": "wwcrva",
+    "version": "0.0.1",
+    "description": "A code base for WWC RVA Angular Demo",
+    "main": "index.js",
+    "scripts": {
+        "start": "node startup-server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/skaldate/WWCRVA.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/skaldate/WWCRVA/issues"
+    },
+    "homepage": "https://github.com/skaldate/WWCRVA#readme",
+    "devDependencies": {
+        "express": "^4.14.0"
+    },
+    "dependencies": {
+        "angular": "^1.5.8",
+        "angular-route": "^1.6.1"
+    }
+}

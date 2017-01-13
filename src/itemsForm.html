@@ -1,0 +1,33 @@
+<div class="container">
+    <ul class="pager">
+        <li class="previous disabled"><a href="#">Previous</a></li>
+        <li class="next"><a href="#!/raffel">Next</a></li>
+    </ul>
+    <div class="col-lg-5  well">
+        <div>
+            <form>
+                <div class="form-group">
+                    <label for="item">Item Name</label>
+                    <input type="text" id="item" class="form-control" ng-model="itemName" />
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Number of Items</label>
+                    <input type="number" id="quantity" class="form-control" ng-model="itemQuantity" />
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input id="image" class="form-control" type="file" custom-on-change pic="thumbnail" file-name="selectedFile" accept="image/gif, image/jpeg, image/png" />
+                </div>
+                <input type="submit" class="btn btn-primary btn-lg" ng-click="addSwag()" />
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-7">
+        <div ng-repeat="item in swagItems" class="list-group" track by item.id>
+            <div class="list-group-item" ng-click="updateItem(item)" ng-class="{active:item.selected}">
+                <h3>{{item.itemName}} <span class="label label-info">{{item.quantity}}</span></h3>
+                <img ng-src="{{item.thumbnail}}" class="thumbnail" />
+            </div>
+        </div>
+    </div>
+</div>
